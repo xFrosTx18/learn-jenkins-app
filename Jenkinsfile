@@ -24,7 +24,7 @@ pipeline {
             steps {
             echo 'Test stage'
             sh '''
-                find * -type f -name "index.html"
+                test -e "index.html"
             '''
             }
         }
