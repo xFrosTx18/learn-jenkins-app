@@ -24,7 +24,7 @@ pipeline {
             steps {
             echo 'Testing if robots.txt exists on build folder'
             sh '''
-                test -e "build/robots.txt"
+                test -f build/robots.txt
             '''
             echo 'running "npm test"'
             sh '''
