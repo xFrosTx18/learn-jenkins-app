@@ -22,11 +22,16 @@ pipeline {
         }
         stage('Test') {
             steps {
-            echo 'Test stage'
+            echo 'Testing if robots.txt exists on build folder'
             sh '''
-                test -e "logo192.png"
+                test -e "build/robots.txt"
+            '''
+            echo 'running "npm test"'
+            sh '''
+                npm test
             '''
             }
+            
         }
     }
 }
