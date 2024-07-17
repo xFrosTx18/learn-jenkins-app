@@ -24,7 +24,7 @@ pipeline {
             steps {
             echo 'Test stage'
             sh '''
-                test -e "index.html"
+                test -e "logo192.png"
             '''
             }
         }
