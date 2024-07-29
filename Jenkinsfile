@@ -40,7 +40,7 @@ pipeline {
             
         }
 
-        stage('Test') {
+        stage('E2E test') {
             agent {
                 docker {
                     image 'mcr.microsoft.com/playwright:v1.45.1-jammy'
